@@ -16,9 +16,10 @@ const App = () => {
         fetch('https://jsonplaceholder.typicode.com/users', {
             method: 'get'
         })
-        .then(response => response.json())
-        .then(users => setRobots(users));
-    }) 
+            .then(response => response.json())
+            .then(users => setRobots(users));
+            console.log("Runs UseEffect")
+    }, []) 
     
     const fallbackRender = ({error, resetErrorBoundary}) => {
         <div role="alert">
